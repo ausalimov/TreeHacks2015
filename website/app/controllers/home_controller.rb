@@ -15,15 +15,16 @@ class HomeController < ApplicationController
 
 	private
 	def search_courses(query)
-		Courses.all.each do |course|
-			if course.name == query || course.number == query then
+		Course.all.each do |course|
+			if (course.name == query || course.number == query) then
 				return course
 			end
 		end
+		return nil
 	end
 
 	def search_books(query)
-		Books.all.each do |book|
+		Book.all.each do |book|
 			if (book.name == query || book.isbn.to_s == query) then
 				return book
 			end
