@@ -8,4 +8,7 @@ class ViewController < ApplicationController
 
 	def user
 	end
+
+	def course
+	end
 end
