@@ -1,6 +1,7 @@
 TO DO 
 
-- check out RESTful routes
+- dynamic route generation
+- figure out page flow from search to listing, considering that you may run into the book list for a course on the way there 
+- case agnostic search (CS106A vs cs106A) 
 - migration for java course content from explore courses api 
-- migration for dummy posts 
 
