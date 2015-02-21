@@ -1,0 +1,7 @@
+<% if @books then %>
+	<% @books.each do |book| %>
+		<h1><%= book.name %></h1>
+	<% end %>
+<% else %>
+	<h1>No books found :(</h1>
+<% end %>

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'view/listing'
 
-  get 'list/query'
+  get 'list/index'
   
   post 'home/search'
 
