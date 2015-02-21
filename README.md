@@ -16,3 +16,7 @@ Personal Implementation Goals:
         2.b) Amazon 
 
 #this is Alex yooooooo let's goooooooo
+
+
+#add facebook api shit?
+
