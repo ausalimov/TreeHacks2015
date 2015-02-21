@@ -14,3 +14,6 @@ Personal Implementation Goals:
     2) Vendor cross reference 
         2.a) Bookstore 
         2.b) Amazon 
+
+# this line was in application.html.erb:
+# <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
