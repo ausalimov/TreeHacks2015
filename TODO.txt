@@ -3,4 +3,12 @@ TO DO
 - check out RESTful routes
 - migration for java course content from explore courses api 
 - migration for dummy posts 
+-crawl stanford bookstore for tbook data?
+-how to crawl for book cover images?
+
+front-end:
+implement from mockups
+figure out fanning effect
+learn jquery/js lol
+
 
