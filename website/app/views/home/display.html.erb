@@ -1,1 +1,6 @@
-<h1>This should be the home page</h1>
+<h1>Welcome to TreeBooks or whatever it's called</h1>
+<%= form_tag('/home/search', method: "post") do %>
+	<%= label_tag(:q, "Search for:") %>
+  	<%= text_field_tag(:query) %>
+  	<%= submit_tag("Search") %>
+<% end %>
