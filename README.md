@@ -15,8 +15,6 @@ Personal Implementation Goals:
         2.a) Bookstore 
         2.b) Amazon 
 
-#this is Alex yooooooo let's goooooooo
 
-
-#add facebook api shit?
-
+# this line was in application.html.erb:
+# <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
