@@ -1,0 +1,6 @@
+TO DO 
+
+- check out RESTful routes
+- migration for java course content from explore courses api 
+- migration for dummy posts 
+
