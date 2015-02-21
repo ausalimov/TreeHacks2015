@@ -3,6 +3,11 @@ class CreateBooks < ActiveRecord::Migration
     create_table :books do |t|
         t.string :isbn
         t.string :name
+        t.string :author
+        t.date :pub_date
+        t.float :version
+        t.boolean :needed
+
 
 
       t.timestamps
