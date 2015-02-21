@@ -6,11 +6,12 @@ class HomeController < ApplicationController
         @course = Course.find_by_number(params[:query])
         @book = Book.find_by_isbn(params[:query])
         if @course 
-		    redirect_to :controller => 'list', :action => 'index', :book_id => nil, :course_id => @course.id
+		    redirect_to :controller => :list, :action => :course, :id => @course.id
         elsif @book 
-		    redirect_to :controller => 'list', :action => 'index', :book_id => @book.id, :course_id => nil
+		    redirect_to :controller => :list, :action => :book, :id => @book.id
         else 
-		    redirect_to :controller => 'list', :action => 'index', :book_id => nil, :course_id => nil
+            # Include a flash notice or validation error
+            render :action => :search
         end
 	end
 

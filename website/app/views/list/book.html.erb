@@ -1,0 +1,7 @@
+<% if @book %>
+	<% @listings.each do |listing| %>
+		<h1><%= listing.user.first_name %></h1>
+	<% end %>
+<% else %>
+	<h1>No Listings Found!</h1>
+<% end %>
