@@ -14,5 +14,3 @@ Personal Implementation Goals:
     2) Vendor cross reference 
         2.a) Bookstore 
         2.b) Amazon 
-
-#this is Alex yooooooo let's goooooooo
