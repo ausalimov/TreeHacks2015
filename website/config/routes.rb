@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   
   post 'home/search'
 
+  get 'home/show'
+
 end

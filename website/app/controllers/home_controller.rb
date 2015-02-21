@@ -3,31 +3,15 @@ class HomeController < ApplicationController
 	end
 
 	def search
-		@query = params[:query]
-		@course = search_courses(@query)
-		if (@course != nil) then
-			@books = @course.books
-		else
-			@books = search_books(@query)
-		end
-		redirect_to :controller => 'list', :action => 'index', :books => @books
+        @course = Course.find_by_number(params[:query])
+        @book = Book.find_by_isbn(params[:query])
+        if @course 
+		    redirect_to :controller => 'list', :action => 'index', :book_id => nil, :course_id => @course.id
+        elsif @book 
+		    redirect_to :controller => 'list', :action => 'index', :book_id => @book.id, :course_id => nil
+        else 
+		    redirect_to :controller => 'list', :action => 'index', :book_id => nil, :course_id => nil
+        end
 	end
 
-	private
-	def search_courses(query)
-		Course.all.each do |course|
-			if (course.name == query || course.number == query) then
-				return course
-			end
-		end
-		return nil
-	end
-
-	def search_books(query)
-		Book.all.each do |book|
-			if (book.name == query || book.isbn.to_s == query) then
-				return book
-			end
-		end
-	end
 end
