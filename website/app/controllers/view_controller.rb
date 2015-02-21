@@ -1,6 +1,7 @@
 class ViewController < ApplicationController
 	# this controller will handle viewing the individual books or listings
 	def book
+		@query = params[:query]
 	end
 
 	def listing

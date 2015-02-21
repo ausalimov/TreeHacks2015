@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#display'
 
+  get 'home/display'
+
   get 'view/book'
 
   get 'view/user'
@@ -15,4 +17,6 @@ Rails.application.routes.draw do
 
   get 'list/query'
   
+  post 'home/search'
+
 end
