@@ -1,0 +1,10 @@
+<h2><%= @user.first_name %> <%= @user.last_name %>'s Listings</p>
+<% @user.listings.each do |list| %>
+	<% book = Book.find_by_id(list.book_id) %>
+	<b>Title:</b> <%= book.name %>
+	<b>Author:</b> <%= book.author %>
+	<b>Price:</b> $<%= list.price %></b>
+	<b>Condition:</b> <%= condition_from_num(list.condition) %>
+	<b>Description:</b> <%= list.descript %></p>
+	<br/>
+<% end %>

@@ -2,14 +2,21 @@
 <h1>Textbooks for <a href="/view/course/<%= @course.id%>"><%= @course.name %></a>:</h1>
 	<div id="accordion">
 		<% @books.each do |book| %>
-			<h3><i><a href="/view/book/<%= book.id%>"><%= book.name %></a></i>, <%= book.author %></h3>
+			<h3><i><%= book.name %></i>, <%= book.author %></h3>
 			<div>
-				<p>Top Listings:</p>
+				<a href="/view/book/<%= book.id%>">Full book information</a>
+				<br/>
+				<b>Top Listings:</b>
+				<br/>
 				<% book.listings.each do |list| %>
-					<p><%= User.find_by_id(list.user_id).first_name %>: $<%= list.price %></p>
-					<p>Condition: <%= @condition %></p>
-					<p>Description: <%= list.descript %></p>
-					<br/>
+				<div class="listing">
+					<p><b>Vendor:</b> <a href="/list/user/<%= list.user_id %>">
+					<%= User.find_by_id(list.user_id).first_name %></a>
+					  <b>Price:</b> $<%= list.price %>
+					  <b>Condition:</b> <%= condition_from_num(list.condition) %>
+					  <b>Description:</b> <%= list.descript %></p>
+				</div>
+				<br/>
 				<% end %>
 			</div>
 		<% end %>

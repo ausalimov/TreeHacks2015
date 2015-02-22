@@ -1,9 +1,13 @@
-<h1><%= @course.number%>: <%= @course.name %></h1>
-<h2>Professor: <%= @course.prof %></h2>
-<h2>Term: <%= @course.term %></h2>
-<h2>Required Textbooks: </h2>
-<% @books.each do |book| %>
-	<% if book.needed %>
-		<a href="/list/book/<%= book.id %>"><i><%= book.name %></i>: <%= book.author %></p>
+<h2><%= @course.number%>: <%= @course.name %></h2>
+<h3>Professor: <%= @course.prof %></h3>
+<h3>Term: <%= @course.term %></h3>
+<h3>Required Textbooks: </h3>
+<% if @books.count > 0 then %>
+	<% @books.each do |book| %>
+		<% if book.needed %>
+			<a href="/list/book/<%= book.id %>"><i><%= book.name %></i>: <%= book.author %></p>
+		<% end %>
 	<% end %>
+<% else %>
+	<p>No books to display</p>
 <% end %>

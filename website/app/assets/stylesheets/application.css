@@ -14,4 +14,11 @@
  *= require_self
  *= require bootstrap.min
  */
+
+ 
+.listing {
+	display: inline-block;
+	margin-bottom: 4px;
+	padding: 3px 2px 1px 2px;
+}
  

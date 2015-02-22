@@ -1,7 +1,13 @@
 <% if @book %>
-	<h1>Listings for <%= @book.name %></h1>
-	<% @listings.each do |listing| %>
-		<h1><%= listing.user.first_name %></h1>
+	<h1>Listings for <i><a href="/view/book/<%= @book.id %>"><%= @book.name %></a></i></h1>
+	<% @listings.each do |list| %>
+		<div class="listing">
+			<p><b>Vendor:</b> <a href="/list/user/<%= list.user_id %>">
+			<%= User.find_by_id(list.user_id).first_name %></a>
+			<b>Price:</b> $<%= list.price %>
+			<b>Condition:</b> <%= condition_from_num(list.condition) %>
+			<b>Description:</b> <%= list.descript %></p>
+		</div>
 	<% end %>
 <% else %>
 	<h1>No Listings Found!</h1>
