@@ -1,6 +1,8 @@
 <% if @books %>
+	<h1>Textbooks for <a href="/view/course/<%= @course.id%>"><%= @course.name %></a>:</h1>
 	<% @books.each do |book| %>
-		<h1><%= book.name %></h1>
+		<a href="/view/book/<%= book.id%>"><%= book.name %></a>
+		<br/>
 	<% end %>
 <% else %>
 	<h1>No books found :(</h1>

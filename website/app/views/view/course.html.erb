@@ -1,1 +1,9 @@
-<h1>View/Course</h1>
+<h1><%= @course.number%>: <%= @course.name %></h1>
+<h2>Professor: <%= @course.prof %></h2>
+<h2>Term: <%= @course.term %></h2>
+<h2>Required Textbooks: </h2>
+<% @books.each do |book| %>
+	<% if book.needed %>
+		<p><i><%= book.name %></i>: <%= book.author %></p>
+	<% end %>
+<% end %>
