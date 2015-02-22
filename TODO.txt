@@ -6,7 +6,7 @@ TO DO
 - migration for dummy posts 
 -crawl stanford bookstore for tbook data?
 -how to crawl for book cover images?
-
+	--google scrapy, python web crawler
 front-end:
 implement from mockups
 figure out fanning effect
