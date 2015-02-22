@@ -2,7 +2,7 @@ TO DO
 
 - figure out page flow from search to listing, considering that you may run into the book list for a course on the way there 
 - case agnostic search (CS106A vs cs106A) 
-- migration for java course content from explore courses api 
+- create Java program that runs some explorecourses api query(?) and updates the database, or leaves it in a state that rails/ruby can access the information. 
 - migration for dummy posts 
 -crawl stanford bookstore for tbook data?
 -how to crawl for book cover images?
