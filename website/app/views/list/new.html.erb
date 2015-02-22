@@ -1,0 +1,7 @@
+<h2>Create a new listing</h2>
+
+<%= form_for(@new_list, method: :post, url: {action: :post}) do |form| %>
+	<%= form.label :username%>
+	<br/>
+	<%= form.submit "Submit" %>
+<% end %>

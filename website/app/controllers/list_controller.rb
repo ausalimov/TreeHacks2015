@@ -17,6 +17,10 @@ class ListController < ApplicationController
         @listings = @book.listings.all
     end
 
+    def new
+        @new_list = Listing.new
+    end
+
     private
     def condition_from_num(num)
         if num == 1
