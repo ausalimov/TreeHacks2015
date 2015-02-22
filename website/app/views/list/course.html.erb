@@ -1,8 +1,7 @@
-<%= javascript_link_tag "jquery" %>
 <% if @books %>
-	<h1>Textbooks for <a href="/view/course/<%= @course.id%>"><%= @course.name %></a>:</h1>
+<h1>Textbooks for <a href="/view/course/<%= @course.id%>"><%= @course.name %></a>:</h1>
 	<div id="accordion">
-	<% @books.each do |book| %>
+		<% @books.each do |book| %>
 			<h3><a href="/view/book/<%= book.id%>"><%= book.name %></a></h3>
 			<div>
 				<p>Top Listings:</p>
@@ -12,8 +11,8 @@
 					<br/>
 				<% end %>
 			</div>
-		<br/>
-	<% end %>
+			<br/>
+		<% end %>
 	</div>
 <% else %>
 	<h1>No books found :(</h1>
