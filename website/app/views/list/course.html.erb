@@ -2,16 +2,16 @@
 <h1>Textbooks for <a href="/view/course/<%= @course.id%>"><%= @course.name %></a>:</h1>
 	<div id="accordion">
 		<% @books.each do |book| %>
-			<h3><a href="/view/book/<%= book.id%>"><%= book.name %></a></h3>
+			<h3><i><a href="/view/book/<%= book.id%>"><%= book.name %></a></i>, <%= book.author %></h3>
 			<div>
 				<p>Top Listings:</p>
 				<% book.listings.each do |list| %>
 					<p><%= User.find_by_id(list.user_id).first_name %>: $<%= list.price %></p>
+					<p>Condition: <%= @condition %></p>
 					<p>Description: <%= list.descript %></p>
 					<br/>
 				<% end %>
 			</div>
-			<br/>
 		<% end %>
 	</div>
 <% else %>
