@@ -1,2 +1,10 @@
-<h1>View/Book</h1>
-<%= @query %>
+<h1><%= @book.name %></h1>
+<br/>
+<h2>Author: <%= @book.author %></h2>
+<h2>Edition: <%= @book.version %></h2>
+<h2>ISBN: #<%= @book.isbn %><h2>
+<h2>Publication Date: <%= @book.pub_date %></h2>
+<h2>Top Listings: </h2>
+<% @listings.each do |listing| %>
+	<p><%= User.find(listing.user_id).first_name %></p>
+<% end %>

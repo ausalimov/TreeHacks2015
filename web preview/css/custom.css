@@ -1,0 +1,23 @@
+.navred{
+	border-radius: 0px;
+	background-color: #8c1515;
+	border:none;
+}
+.selected{
+	background-color: #6c1111 !important;
+}
+.whitelinks{
+	color: white !important;
+}
+.form-control {
+    display: inline-block;
+    width: auto; /*This is the issue*/
+    vertical-align: middle;
+}
+#logo{
+	width:25px;
+	height:auto;
+	margin-right:5px;
+	    display: inline-block;
+
+}

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221210153) do
+ActiveRecord::Schema.define(version: 20150222052538) do
 
   create_table "books", force: true do |t|
     t.string   "isbn"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20150221210153) do
     t.integer  "condition"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "price",      precision: 8, scale: 2
+    t.string   "descript"
   end
 
   create_table "users", force: true do |t|

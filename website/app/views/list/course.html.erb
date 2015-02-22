@@ -1,7 +1,20 @@
+<%= javascript_link_tag "jquery" %>
 <% if @books %>
+	<h1>Textbooks for <a href="/view/course/<%= @course.id%>"><%= @course.name %></a>:</h1>
+	<div id="accordion">
 	<% @books.each do |book| %>
-		<h1><%= book.name %></h1>
+			<h3><a href="/view/book/<%= book.id%>"><%= book.name %></a></h3>
+			<div>
+				<p>Top Listings:</p>
+				<% book.listings.each do |list| %>
+					<p><%= User.find_by_id(list.user_id).first_name %>: $<%= list.price %></p>
+					<p>Description: <%= list.descript %></p>
+					<br/>
+				<% end %>
+			</div>
+		<br/>
 	<% end %>
+	</div>
 <% else %>
 	<h1>No books found :(</h1>
 <% end %>

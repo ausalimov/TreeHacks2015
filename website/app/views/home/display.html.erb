@@ -1,3 +1,6 @@
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
 <h1>Welcome to TreeBooks or whatever it's called</h1>
 <%= form_tag('/home/search', method: "post") do %>
 	<%= label_tag(:q, "Search for:") %>
