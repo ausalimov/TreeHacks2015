@@ -11,6 +11,5 @@ class ListController < ApplicationController
     def book
         @book = Book.find_by_id(params[:id])
         @listings = @book.listings.all
-
     end
 end

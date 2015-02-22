@@ -4,6 +4,6 @@
 <h2>Required Textbooks: </h2>
 <% @books.each do |book| %>
 	<% if book.needed %>
-		<p><i><%= book.name %></i>: <%= book.author %></p>
+		<a href="/list/book/<%= book.id %>"><i><%= book.name %></i>: <%= book.author %></p>
 	<% end %>
 <% end %>
